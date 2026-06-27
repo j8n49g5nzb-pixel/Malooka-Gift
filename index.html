@@ -25,7 +25,6 @@
             position: relative;
         }
 
-        /* شاشة قفل الباسورد */
         .lock-screen {
             background: rgba(255, 255, 255, 0.95);
             padding: 30px 20px;
@@ -83,7 +82,6 @@
             display: none;
         }
 
-        /* بوكس الرسالة الكبير الرومانسي */
         .letter-box {
             background: #fff0f5;
             width: 100%;
@@ -126,7 +124,6 @@
             text-align: justify;
         }
 
-        /* حاوية صور ملوكة */
         .couples-container {
             display: flex;
             flex-direction: column;
@@ -159,7 +156,6 @@
             line-height: 1.5;
         }
 
-        /* الفراشات والقلوب المتطايرة بالخلفية */
         .floating-particle {
             position: absolute;
             pointer-events: none;
@@ -194,12 +190,10 @@
 </head>
 <body>
 
-    <!-- الأغنية المباشرة لعمرو دياب (برج الحوت) -->
     <audio id="love-music" loop>
         <source src="https://archive.org/download/amrdiab_202209/AmrDiab-AgmalEyoun.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- شاشة قفل الباسورد -->
     <div class="lock-screen" id="lockScreen">
         <div class="kitty-decor">🐱🎀</div>
         <h2>اكتبي الباسورد هنا يا لوكا ✨</h2>
@@ -209,7 +203,6 @@
         <div class="error-msg" id="errorMsg">الباسورد غلط يا ملوكتي.. ركزي تاني! 🥺❤️</div>
     </div>
 
-    <!-- بوكس الرسالة الكبير والواضح جداً -->
     <div class="letter-box" id="letterBox">
         <div class="letter-content">
             <h1>يا أجمل وأرق ملك في الكون.. 👑💖</h1>
@@ -220,24 +213,23 @@
                 أنا بجد محظوظ بوجودك في حياتي، بحبك حب ملوش آخر ولا نهاية، حب بيكبر مع كل ثانية وكل دقيقة بلمح فيها عيونك اللي عمرو دياب غنالها "يا أجمل عيون وأحلى عيون". أنتِ الفراشة اللي طايرة في دنيتي ومخلياني أسعد إنسان. ربنا يخليكي ليا يا ملوكتي وميحرمنيش من دلعك وحلاوتك أبداً! 💕
             </p>
 
-            <!-- كروت صور ملوكة القمر -->
             <div class="couples-container">
                 
-                <!-- الصورة الأولى (السيلفي بابتسامة رقيقة) -->
+                <!-- الصورة الأولى HD -->
                 <div class="couple-card">
-                    <img src="https://i.ibb.co/BHZZdVm2/image.png" alt="Malaak 1">
+                    <img src="https://i.ibb.co/v66pmsM/image.png" alt="Malaak 1">
                     <div class="caption">الضحكة دي أصلاً محتاجة تصريح أمني من كتر الحلاوة والرقّة! حقيقي قمر يا ملوكتي دايماً خطافة للقلب وبتاخدي العين.. 🥰❤️</div>
                 </div>
                 
-                <!-- الصورة الثانية (الحجاب والستايل البينك الكيوت) -->
+                <!-- الصورة الثانية HD -->
                 <div class="couple-card">
-                    <img src="https://i.ibb.co/vFCJ6Yq/image.png" alt="Malaak 2">
+                    <img src="https://i.ibb.co/c1rXm49/image.png" alt="Malaak 2">
                     <div class="caption">أنا متهيألي الستايل والجمال ده اتخلق عشانك أنتِ وبس! الرقة والهدوء والضحكة دي هما كل أماني الدنيا بالنسبة لي.. 🎀🌸</div>
                 </div>
 
-                <!-- الصورة الثالثة (السيلفي التاني الروعة) -->
+                <!-- الصورة الثالثة HD -->
                 <div class="couple-card">
-                    <img src="https://i.ibb.co/vCtmyyK5/image.png" alt="Malaak 3">
+                    <img src="https://i.ibb.co/zZ1QByT/image.png" alt="Malaak 3">
                     <div class="caption">يا أجمل عيون وأحلى عيون في الكون كله.. عمرو دياب لما غنى الأغنية دي كان أكيد يقصد نظرتك وجمالك أنتِ بالذات! بعشقك.. 💖✨</div>
                 </div>
 
@@ -257,7 +249,6 @@
             const music = document.getElementById('love-music');
 
             openBtn.addEventListener('click', () => {
-                // الباسورد المطلوب بالظبط
                 if (passInput.value === 'Maloka') {
                     lockScreen.style.opacity = '0';
                     lockScreen.style.transform = 'scale(0.8)';
@@ -271,7 +262,6 @@
                         }, 50);
                     }, 500);
 
-                    // الأغنية تبدأ من أول الدقيقة التانية فوراً (الثانية 120)
                     music.play().then(() => {
                         music.currentTime = 120;
                     }).catch(err => {
