@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة خاصة لملوكة 💖✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Reem_Kufi:wght@500;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7a0010 0%, #d90429 50%, #ff4d6d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* شاشة قفل الباسورد */
+        .lock-screen {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            z-index: 10;
+            transition: all 0.5s ease;
+            border: 4px solid #ff4d6d;
+        }
+
+        .lock-screen h2 {
+            color: #d90429;
+            font-family: 'Reem Kufi', sans-serif;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .lock-screen input {
+            width: 90%;
+            padding: 12px;
+            border: 2px solid #ff758f;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            outline: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .lock-screen button {
+            background: #d90429;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 5px 15px rgba(217, 4, 41, 0.4);
+        }
+
+        .lock-screen button:hover {
+            background: #ef233c;
+        }
+
+        .error-msg {
+            color: #d90429;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* بوكس الرسالة الكبير الرومانسي */
+        .letter-box {
+            background: #fff0f5;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            border: 5px solid #d90429;
+            padding: 25px;
+            display: none;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            z-index: 9;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .letter-box::-webkit-scrollbar {
+            width: 6px;
+        }
+        .letter-box::-webkit-scrollbar-thumb {
+            background-color: #d90429;
+            border-radius: 10px;
+        }
+
+        .letter-content h1 {
+            color: #d90429;
+            font-family: 'Reem Kufi', sans-serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .letter-content p {
+            font-size: 16px;
+            color: #2b2b2b;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: justify;
+        }
+
+        /* حاوية صور ملوكة */
+        .couples-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .couple-card {
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 8px 20px rgba(217, 4, 41, 0.15);
+            border: 2px solid #ffb3c6;
+        }
+
+        .couple-card img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .couple-card .caption {
+            text-align: center;
+            color: #d90429;
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* الفراشات والقلوب المتطايرة بالخلفية */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.8;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(105vh) translateX(0) scale(0.6) rotate(0deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(80px) scale(1.4) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .kitty-decor {
+            font-size: 40px;
+            margin-bottom: 10px;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الأغنية المباشرة لعمرو دياب (برج الحوت) -->
+    <audio id="love-music" loop>
+        <source src="https://archive.org/download/amrdiab_202209/AmrDiab-AgmalEyoun.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- شاشة قفل الباسورد -->
+    <div class="lock-screen" id="lockScreen">
+        <div class="kitty-decor">🐱🎀</div>
+        <h2>اكتبي الباسورد هنا يا لوكا ✨</h2>
+        <input type="password" id="passInput" placeholder="اكتبي كلمة السر السحرية...">
+        <br>
+        <button id="openBtn">فتح الجواب 💌</button>
+        <div class="error-msg" id="errorMsg">الباسورد غلط يا ملوكتي.. ركزي تاني! 🥺❤️</div>
+    </div>
+
+    <!-- بوكس الرسالة الكبير والواضح جداً -->
+    <div class="letter-box" id="letterBox">
+        <div class="letter-content">
+            <h1>يا أجمل وأرق ملك في الكون.. 👑💖</h1>
+            <p>
+                ملك.. الاسم لوحده حكاية، وأنتِ فعلاً ملكة متربعة جوة قلبي وعيني. جمالك ده مش محتاج كلام، الضحكة دي أصلاً بتنور الدنيا كلها وتخلي كل حاجة حواليا تضحك! غطيتي على كل بنات الكوكب برقتك وشقاوتك وخفة دمك اللي بتدوبني. 
+            </p>
+            <p>
+                أنا بجد محظوظ بوجودك في حياتي، بحبك حب ملوش آخر ولا نهاية، حب بيكبر مع كل ثانية وكل دقيقة بلمح فيها عيونك اللي عمرو دياب غنالها "يا أجمل عيون وأحلى عيون". أنتِ الفراشة اللي طايرة في دنيتي ومخلياني أسعد إنسان. ربنا يخليكي ليا يا ملوكتي وميحرمنيش من دلعك وحلاوتك أبداً! 💕
+            </p>
+
+            <!-- كروت صور ملوكة القمر -->
+            <div class="couples-container">
+                
+                <!-- الصورة الأولى (السيلفي بابتسامة رقيقة) -->
+                <div class="couple-card">
+                    <img src="https://i.ibb.co/BHZZdVm2/image.png" alt="Malaak 1">
+                    <div class="caption">الضحكة دي أصلاً محتاجة تصريح أمني من كتر الحلاوة والرقّة! حقيقي قمر يا ملوكتي دايماً خطافة للقلب وبتاخدي العين.. 🥰❤️</div>
+                </div>
+                
+                <!-- الصورة الثانية (الحجاب والستايل البينك الكيوت) -->
+                <div class="couple-card">
+                    <img src="https://i.ibb.co/vFCJ6Yq/image.png" alt="Malaak 2">
+                    <div class="caption">أنا متهيألي الستايل والجمال ده اتخلق عشانك أنتِ وبس! الرقة والهدوء والضحكة دي هما كل أماني الدنيا بالنسبة لي.. 🎀🌸</div>
+                </div>
+
+                <!-- الصورة الثالثة (السيلفي التاني الروعة) -->
+                <div class="couple-card">
+                    <img src="https://i.ibb.co/vCtmyyK5/image.png" alt="Malaak 3">
+                    <div class="caption">يا أجمل عيون وأحلى عيون في الكون كله.. عمرو دياب لما غنى الأغنية دي كان أكيد يقصد نظرتك وجمالك أنتِ بالذات! بعشقك.. 💖✨</div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; font-size: 30px; margin-top: 20px; animation: bounce 1s infinite alternate;">💖🐱🦋</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lockScreen = document.getElementById('lockScreen');
+            const letterBox = document.getElementById('letterBox');
+            const passInput = document.getElementById('passInput');
+            const openBtn = document.getElementById('openBtn');
+            const errorMsg = document.getElementById('errorMsg');
+            const music = document.getElementById('love-music');
+
+            openBtn.addEventListener('click', () => {
+                // الباسورد المطلوب بالظبط
+                if (passInput.value === 'Maloka') {
+                    lockScreen.style.opacity = '0';
+                    lockScreen.style.transform = 'scale(0.8)';
+                    
+                    setTimeout(() => {
+                        lockScreen.style.display = 'none';
+                        letterBox.style.display = 'block';
+                        setTimeout(() => {
+                            letterBox.style.opacity = '1';
+                            letterBox.style.transform = 'scale(1)';
+                        }, 50);
+                    }, 500);
+
+                    // الأغنية تبدأ من أول الدقيقة التانية فوراً (الثانية 120)
+                    music.play().then(() => {
+                        music.currentTime = 120;
+                    }).catch(err => {
+                        console.log("المتصفح يحتاج تفاعل لتشغيل الصوت.");
+                    });
+
+                } else {
+                    errorMsg.style.display = 'block';
+                    passInput.style.borderColor = '#d90429';
+                }
+            });
+
+            function createParticles() {
+                const elements = ['🦋', '💖', '❤️', '🌸', '✨'];
+                const particle = document.createElement('div');
+                particle.classList.add('floating-particle');
+                particle.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 6000);
+            }
+
+            setInterval(createParticles, 400);
+        });
+    </script>
+</body>
+</html>
